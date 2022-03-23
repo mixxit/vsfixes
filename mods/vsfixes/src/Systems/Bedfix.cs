@@ -64,7 +64,7 @@ namespace vsfixes.src.Systems
             
 
             __instance.MountedBy = entityAgent;
-            if (__instance?.Api.Side == EnumAppSide.Server)
+            if (__instance?.Api?.Side == EnumAppSide.Server)
             {
                 __instance.RegisterGameTickListener(RestPlayer(__instance), 200);
                 fieldInfoHoursTotal.SetValue(__instance,__instance.Api.World.Calendar.TotalHours);
