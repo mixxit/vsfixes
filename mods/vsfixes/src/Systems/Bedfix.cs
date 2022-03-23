@@ -76,11 +76,6 @@ namespace vsfixes.src.Systems
             return false;
         }
 
-        private static Action<float> RestPlayer(BlockEntityBed instance)
-        {
-            throw new NotImplementedException();
-        }
-
         void RestPlayer(BlockEntityBed __instance, float dt)
         {
             MethodInfo methodInfoRestPlayer = typeof(BlockEntityBed).GetMethod("RestPlayer", BindingFlags.NonPublic |
