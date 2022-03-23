@@ -1,0 +1,14 @@
+{
+    "type": "code",
+    "modid": "vsfixes",
+    "name": "vsfixes",
+    "author": "mixxit",
+    "description": "Various fixes for versions of the game",
+    "version": "1.16.4-rc.2",
+    "requiredOnClient": "true",
+    "requiredOnServer": "true",
+    "dependency": {
+        "game": "1.16.4",
+        "survival": "1.16.4"
+    }
+}
