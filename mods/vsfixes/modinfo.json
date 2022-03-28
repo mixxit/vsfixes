@@ -3,8 +3,8 @@
     "modid": "vsfixes",
     "name": "vsfixes",
     "author": "mixxit",
-    "description": "Various fixes for versions of the game",
-    "version": "1.16.4-rc.3",
+    "description": "Various fixes and patches for versions of the game",
+    "version": "1.16.4-rc.4",
     "requiredOnClient": "true",
     "requiredOnServer": "true",
     "dependency": {

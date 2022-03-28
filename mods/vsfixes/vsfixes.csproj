@@ -77,6 +77,7 @@
     <Folder Include="assets\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Systems\PoulticeOthers.cs" />
     <Compile Include="src\Systems\Bedfix.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

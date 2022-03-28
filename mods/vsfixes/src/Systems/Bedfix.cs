@@ -66,7 +66,7 @@ namespace vsfixes.src.Systems
             __instance.MountedBy = entityAgent;
             if (__instance?.Api?.Side == EnumAppSide.Server)
             {
-                __instance.RegisterGameTickListener(RestPlayer(__instance), 200);
+                __instance.RegisterGameTickListener((dt) => RestPlayer(__instance,dt), 200);
                 fieldInfoHoursTotal.SetValue(__instance,__instance.Api.World.Calendar.TotalHours);
             }
 
@@ -76,7 +76,7 @@ namespace vsfixes.src.Systems
             return false;
         }
 
-        void RestPlayer(BlockEntityBed __instance, float dt)
+        private static void RestPlayer(BlockEntityBed __instance, float dt)
         {
             MethodInfo methodInfoRestPlayer = typeof(BlockEntityBed).GetMethod("RestPlayer", BindingFlags.NonPublic |
                                               BindingFlags.Instance);
