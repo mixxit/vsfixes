@@ -59,13 +59,22 @@ namespace vsfixes.src.Systems
             {
                 JsonObject attr = slot.Itemstack.Collectible.Attributes;
                 float health = attr["health"].AsFloat();
+
+                var source = byEntity is EntityPlayer ? EnumDamageSource.Player : EnumDamageSource.Entity;
                 var entityToHeal = entitySel?.Entity;
                 if (entityToHeal == null)
+                {
                     entityToHeal = byEntity;
-                
+                    source = EnumDamageSource.Internal;
+                }
+
+                if (entityToHeal == null)
+                    return false;
+
                 entityToHeal.ReceiveDamage(new DamageSource()
                 {
-                    Source = EnumDamageSource.Internal,
+                    Source = source,
+                    SourceEntity = source == EnumDamageSource.Internal ? null : byEntity,
                     Type = health > 0 ? EnumDamageType.Heal : EnumDamageType.Poison
                 }, Math.Abs(health));
 
