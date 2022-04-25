@@ -4,11 +4,11 @@
     "name": "vsfixes",
     "author": "mixxit",
     "description": "Various fixes and patches for versions of the game",
-    "version": "1.16.4-rc.5",
+    "version": "1.16.5-rc.1",
     "requiredOnClient": "true",
     "requiredOnServer": "true",
     "dependency": {
-        "game": "1.16.4",
-        "survival": "1.16.4"
+        "game": "1.16.5",
+        "survival": "1.16.5"
     }
 }
